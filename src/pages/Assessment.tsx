@@ -119,7 +119,7 @@ export default function Assessment() {
 
   // Render question component
   const currentQuestion = getCurrentQuestion();
-  const sectionInfo = getCurrentSectionInfo();
+  const currentSectionInfo = getCurrentSectionInfo();
   
   if (!currentQuestion) {
     return <div>Loading...</div>;
@@ -130,8 +130,8 @@ export default function Assessment() {
       question={currentQuestion}
       questionIndex={assessmentState.currentQuestionIndex}
       totalQuestions={assessmentQuestions.length}
-      sectionTitle={sectionInfo.title}
-      sectionDescription={sectionInfo.description}
+      sectionTitle={currentSectionInfo.title}
+      sectionDescription={currentSectionInfo.description}
       onAnswer={handleAnswer}
       onNext={handleNext}
       onPrevious={handlePrevious}
